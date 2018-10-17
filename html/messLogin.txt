@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.container {
+    position: relative;
+    font-family: Arial;
+}
+
+
+.text-block {
+    position: absolute;
+    bottom: 5px;
+    left: 120px;
+    background-color:      #DCB579;
+    color: white;
+    padding-left: 100px;
+    padding-right: 500px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="topnav">
+
+ <a href="#home">Admin</a>
+  <a href="#news">Manger</a>
+ <a href="#contact">Student</a>
+ <a href="#about">HMC</a>
+<a href="#about">RT</a>
+<a href="#about">Senior Warden</a>
+<a href="#about">MessStaff</a>
+<a href="file:///D:/5%20semester/html/MainPage.html>Home</a>
+</div>
+
+
+ <img src="mess.jpg" alt="Nature" style="width:1350px;height:200px;">
+
+
+
+</div>
+
+
+
+</body>
+</html>
