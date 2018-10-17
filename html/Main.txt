@@ -76,12 +76,12 @@ img {
 <div class="container">
 <div class="topnav">
 
- <a href="#home">Admin</a>
+ <a href="Admin Login page.html">Admin</a>
   <a href="#news">Manger</a>
  <a href="student1.html">Student</a>
- <a href="#about">HMC</a>
-<a href="RTLogin.html">RT</a>
-<a href="#about">Senior Warden</a>
+ <a href="login.html">HMC</a>
+<a href="RT Login page.html">RT</a>
+<a href="bargain.html">Senior Warden</a>
 <a href="messlogin.html">MessStaff</a>
 <a href="Main.html">Home</a>
 </div>
@@ -92,7 +92,7 @@ img {
 <div class="centeredd"><i>Welcome to</i></div>
 
 <div class="centered"><b>Smart Hostel</b></div>
-<div class="text"><p>--------This is a pragraph----------- </p></div>
+<div class="text"><p>--------Beyond Beds and Books'Hostel Life grows up----------- </p></div>
   
 
   
