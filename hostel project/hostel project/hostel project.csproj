@@ -149,6 +149,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RTController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -362,6 +364,16 @@
     <Content Include="Views\Home\newrequests.cshtml" />
     <Content Include="Views\Home\approvedrequest.cshtml" />
     <Content Include="Views\Shared\_start.cshtml" />
+    <Content Include="Views\Shared\Studentregister.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\AddComplains.cshtml" />
+    <Content Include="Views\Student\ViewDetails.cshtml" />
+    <Content Include="Views\Student\Calender.cshtml" />
+    <Content Include="Views\Shared\RT.cshtml" />
+    <Content Include="Views\RT\Index.cshtml" />
+    <Content Include="Views\RT\Menu.cshtml" />
+    <Content Include="Views\RT\OneDayMenu.cshtml" />
+    <Content Include="Views\RT\Requests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
