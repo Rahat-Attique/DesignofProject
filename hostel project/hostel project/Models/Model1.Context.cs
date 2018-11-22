@@ -12,13 +12,11 @@ namespace hostel_project.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
-    public partial class HostelProjectEntities : DbContext
+    public partial class Database1Entities : DbContext
     {
-        public HostelProjectEntities()
-            : base("name=HostelProjectEntities")
+        public Database1Entities()
+            : base("name=Database1Entities")
         {
         }
     
@@ -27,46 +25,6 @@ namespace hostel_project.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserActivation> UserActivations { get; set; }
-    
-        public virtual ObjectResult<Nullable<int>> Insert_User(string username, string password)
-        {
-            var usernameParameter = username != null ?
-                new ObjectParameter("Username", username) :
-                new ObjectParameter("Username", typeof(string));
-    
-            var passwordParameter = password != null ?
-                new ObjectParameter("Password", password) :
-                new ObjectParameter("Password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("Insert_User", usernameParameter, passwordParameter);
-        }
-    
-        public virtual ObjectResult<Nullable<int>> Validate_User(string username, string password)
-        {
-            var usernameParameter = username != null ?
-                new ObjectParameter("Username", username) :
-                new ObjectParameter("Username", typeof(string));
-    
-            var passwordParameter = password != null ?
-                new ObjectParameter("Password", password) :
-                new ObjectParameter("Password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("Validate_User", usernameParameter, passwordParameter);
-        }
-    
-        public virtual ObjectResult<Nullable<int>> ValidateUser(string username, string password)
-        {
-            var usernameParameter = username != null ?
-                new ObjectParameter("Username", username) :
-                new ObjectParameter("Username", typeof(string));
-    
-            var passwordParameter = password != null ?
-                new ObjectParameter("Password", password) :
-                new ObjectParameter("Password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("ValidateUser", usernameParameter, passwordParameter);
-        }
+        public virtual DbSet<Table> Tables { get; set; }
     }
 }

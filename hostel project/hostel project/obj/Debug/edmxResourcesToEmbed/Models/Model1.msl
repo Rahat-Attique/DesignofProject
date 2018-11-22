@@ -1,36 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="HostelProjectModelStoreContainer" CdmEntityContainer="HostelProjectEntities">
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="HostelProjectModel.User">
-        <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="Database1Model.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-      <EntityTypeMapping TypeName="HostelProjectModel.User">
-        <ModificationFunctionMapping>
-          <InsertFunction FunctionName="HostelProjectModel.Store.Insert_User">
-            <ScalarProperty Name="Password" ParameterName="Password" />
-            <ScalarProperty Name="Username" ParameterName="Username" />
-            <ResultBinding Name="UserId" ColumnName="UserId" />
-          </InsertFunction>
-        </ModificationFunctionMapping>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Insert_User" FunctionName="HostelProjectModel.Store.Insert_User" />
-    <EntitySetMapping Name="UserActivations">
-      <EntityTypeMapping TypeName="HostelProjectModel.UserActivation">
-        <MappingFragment StoreEntitySet="UserActivation">
-          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailAdress" ColumnName="EmailAdress" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="HostelName" ColumnName="HostelName" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Validate_User" FunctionName="HostelProjectModel.Store.Validate_User" />
-    <FunctionImportMapping FunctionImportName="ValidateUser" FunctionName="HostelProjectModel.Store.Validate_User" />
   </EntityContainerMapping>
 </Mapping>

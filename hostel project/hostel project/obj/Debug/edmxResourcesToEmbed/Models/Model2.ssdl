@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HostelProjectModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HostelProject.dbo.Profile_Table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Profile_Table">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="EmailAdress" />
+      <PropertyRef Name="PhoneNo" />
+      <PropertyRef Name="CNIC" />
+      <PropertyRef Name="Adress" />
+      <PropertyRef Name="Degree" />
+      <PropertyRef Name="DepartmentName" />
+      <PropertyRef Name="RegistrationNo" />
+      <PropertyRef Name="HostelName" />
+      <PropertyRef Name="RoomNo" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailAdress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="CNIC" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Degree" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegistrationNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HostelName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoomNo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HostelProject.dbo.Stu_Table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Stu_Table">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="EmailAdress" />
+      <PropertyRef Name="PhoneNo" />
+      <PropertyRef Name="CNIC" />
+      <PropertyRef Name="Adress" />
+      <PropertyRef Name="Degree" />
+      <PropertyRef Name="DepartmentName" />
+      <PropertyRef Name="RegistrationNo" />
+      <PropertyRef Name="HostelName" />
+      <PropertyRef Name="RoomNo" />
+    </Key>
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailAdress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="CNIC" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Degree" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegistrationNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HostelName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoomNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HostelProjectModel1StoreContainer">
+    <EntitySet Name="Profile_Table" EntityType="Self.Profile_Table" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Profile_Table].[Name] AS [Name], 
+    [Profile_Table].[Password] AS [Password], 
+    [Profile_Table].[EmailAdress] AS [EmailAdress], 
+    [Profile_Table].[PhoneNo] AS [PhoneNo], 
+    [Profile_Table].[CNIC] AS [CNIC], 
+    [Profile_Table].[Adress] AS [Adress], 
+    [Profile_Table].[Degree] AS [Degree], 
+    [Profile_Table].[DepartmentName] AS [DepartmentName], 
+    [Profile_Table].[RegistrationNo] AS [RegistrationNo], 
+    [Profile_Table].[HostelName] AS [HostelName], 
+    [Profile_Table].[RoomNo] AS [RoomNo]
+    FROM [dbo].[Profile_Table] AS [Profile_Table]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Stu_Table" EntityType="Self.Stu_Table" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Stu_Table].[StudentId] AS [StudentId], 
+    [Stu_Table].[Name] AS [Name], 
+    [Stu_Table].[Password] AS [Password], 
+    [Stu_Table].[EmailAdress] AS [EmailAdress], 
+    [Stu_Table].[PhoneNo] AS [PhoneNo], 
+    [Stu_Table].[CNIC] AS [CNIC], 
+    [Stu_Table].[Adress] AS [Adress], 
+    [Stu_Table].[Degree] AS [Degree], 
+    [Stu_Table].[DepartmentName] AS [DepartmentName], 
+    [Stu_Table].[RegistrationNo] AS [RegistrationNo], 
+    [Stu_Table].[HostelName] AS [HostelName], 
+    [Stu_Table].[RoomNo] AS [RoomNo]
+    FROM [dbo].[Stu_Table] AS [Stu_Table]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
