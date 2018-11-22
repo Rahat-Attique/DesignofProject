@@ -14,7 +14,7 @@ namespace hostel_project.Controllers
             return View();
         }
         // GET: start
-        public ActionResult Regi()
+        public ActionResult login()
         {
             return View();
         }

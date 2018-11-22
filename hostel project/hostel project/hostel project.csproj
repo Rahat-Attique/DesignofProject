@@ -157,27 +157,33 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Controllers\RTController.cs" />
     <Compile Include="Controllers\startController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="projectmodel.Context.cs">
+    <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>projectmodel.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="projectmodel.cs">
+    <Compile Include="Models\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>projectmodel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="projectmodel.Designer.cs">
+    <Compile Include="Models\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>projectmodel.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserActivation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -282,15 +288,60 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="projectmodel.Context.tt">
+    <Content Include="lcs\css\main.css" />
+    <Content Include="lcs\css\util.css" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="lcs\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="lcs\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="lcs\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="lcs\fonts\ubuntu\UFL.txt" />
+    <Content Include="lcs\images\bg-01.jpg" />
+    <Content Include="lcs\images\icons\favicon.ico" />
+    <Content Include="lcs\js\main.js" />
+    <Content Include="lcs\vendor\animate\animate.css" />
+    <Content Include="lcs\vendor\animsition\css\animsition.css" />
+    <Content Include="lcs\vendor\animsition\css\animsition.min.css" />
+    <Content Include="lcs\vendor\animsition\js\animsition.js" />
+    <Content Include="lcs\vendor\animsition\js\animsition.min.js" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lcs\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="lcs\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lcs\vendor\bootstrap\js\popper.js" />
+    <Content Include="lcs\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="lcs\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="lcs\vendor\countdowntime\countdowntime.js" />
+    <Content Include="lcs\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="lcs\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="lcs\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="lcs\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="lcs\vendor\daterangepicker\moment.js" />
+    <Content Include="lcs\vendor\daterangepicker\moment.min.js" />
+    <Content Include="lcs\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="lcs\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="lcs\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="lcs\vendor\select2\select2.css" />
+    <Content Include="lcs\vendor\select2\select2.js" />
+    <Content Include="lcs\vendor\select2\select2.min.css" />
+    <Content Include="lcs\vendor\select2\select2.min.js" />
+    <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>projectmodel.Context.cs</LastGenOutput>
-      <DependentUpon>projectmodel.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="projectmodel.tt">
+    <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>projectmodel.edmx</DependentUpon>
-      <LastGenOutput>projectmodel.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -368,12 +419,85 @@
     <Content Include="BS3\assets\sass\light-bootstrap-dashboard.scss" />
     <Content Include="BS3\CHANGELOG.md" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <EntityDeploy Include="projectmodel.edmx">
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="lcs\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="lcs\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="lcs\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="lcs\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="lcs\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="lcs\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="lcs\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="lcs\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="lcs\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lcs\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>projectmodel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="projectmodel.edmx.diagram">
-      <DependentUpon>projectmodel.edmx</DependentUpon>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -386,7 +510,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -395,7 +521,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\register.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Dinner.cshtml" />
     <Content Include="Views\Home\expenses.cshtml" />
@@ -419,14 +544,19 @@
     <Content Include="Views\RT\OneDayMenu.cshtml" />
     <Content Include="Views\RT\Requests.cshtml" />
     <Content Include="Views\start\Index.cshtml" />
-    <Content Include="Views\register\register.cshtml" />
+    <Content Include="Views\Shared\_regi.cshtml" />
+    <Content Include="Views\start\login.cshtml" />
+    <Content Include="Views\user\AddUser.cshtml" />
+    <Content Include="Views\user\Index.cshtml" />
+    <Content Include="Views\user\Profile.cshtml" />
+    <Content Include="Views\user\register.cshtml" />
+    <Content Include="Views\user\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -266,7 +266,6 @@ C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\Microso
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\Microsoft.AI.Web.xml
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\obj\Debug\hostel project.csprojAssemblyReference.cache
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\obj\Debug\hostel project.csproj.CoreCompileInputs.cache
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\obj\Debug\hostel project.csproj.CopyComplete
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\obj\Debug\hostel project.dll
@@ -275,3 +274,4 @@ C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\EntityF
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\EntityFramework.SqlServer.dll
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\EntityFramework.xml
 C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\bin\EntityFramework.SqlServer.xml
+C:\Users\rahat\Desktop\DesignofProject\hostel project\hostel project\obj\Debug\hostel project.csprojAssemblyReference.cache

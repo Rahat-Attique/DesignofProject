@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HostelProjectModelStoreContainer" CdmEntityContainer="HostelProjectEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HostelProjectModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="HostelProjectModel.User">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="HostelProjectModel.Store.Insert_User">
+            <ScalarProperty Name="Password" ParameterName="Password" />
+            <ScalarProperty Name="Username" ParameterName="Username" />
+            <ResultBinding Name="UserId" ColumnName="UserId" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Insert_User" FunctionName="HostelProjectModel.Store.Insert_User" />
+    <EntitySetMapping Name="UserActivations">
+      <EntityTypeMapping TypeName="HostelProjectModel.UserActivation">
+        <MappingFragment StoreEntitySet="UserActivation">
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Validate_User" FunctionName="HostelProjectModel.Store.Validate_User" />
+    <FunctionImportMapping FunctionImportName="ValidateUser" FunctionName="HostelProjectModel.Store.Validate_User" />
+  </EntityContainerMapping>
+</Mapping>

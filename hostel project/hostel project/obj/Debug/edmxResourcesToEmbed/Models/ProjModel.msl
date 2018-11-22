@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HostelProjectModel2StoreContainer" CdmEntityContainer="HostelProjectEntities3">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HostelProjectModel2.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="HostelProjectModel2.User">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="HostelProjectModel2.Store.Insert_User">
+            <ScalarProperty Name="Password" ParameterName="Password" />
+            <ScalarProperty Name="Username" ParameterName="Username" />
+            <ResultBinding Name="UserId" ColumnName="UserId" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Insert_User" FunctionName="HostelProjectModel2.Store.Insert_User" />
+  </EntityContainerMapping>
+</Mapping>
